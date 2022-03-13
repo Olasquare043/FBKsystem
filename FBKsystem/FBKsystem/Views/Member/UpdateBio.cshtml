@@ -1,0 +1,120 @@
+﻿@model Biodata
+@{
+    Layout = "~/Views/Shared/_MemberDashboardLayout.cshtml";
+}
+<section class="content">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <nav aria-label="breadcrumb" class=" rounded-3 mb-4">
+                    <ol class="breadcrumb mb-0">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">User</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">user - Profile</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <form asp-action="UpdateBio" method="post" needs-validation >
+           <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="card p-6">
+                        <div class="card-header">
+                            <h4 class="m-1">Basic Information <small>Carefully fill the form below...</small> </h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="row m-3">
+                                <input type="hidden" asp-for="MemberId" />
+
+                                <div class="col-sm-6 ">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <input type="text" class="form-control" placeholder="Nickname" asp-for="Nickname" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="  form-group">
+                                        <div class="form-line">
+                                            <input type="text" class="form-control" placeholder="Othername" asp-for="Othername" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row m-3">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <input type="Email" class="form-control" placeholder="Email" asp-for="Email" required>
+                                            <div class="invalid-feedback">Enter correct email</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <input type="text" class="form-control" placeholder="Phone" asp-for="Phone" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row m-3">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <input type="text" class="form-control" placeholder="Age" asp-for="Age" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <select class="form-control show-tick" asp-for="Gender" required>
+                                            <option value="">-- Gender --</option>
+                                            <option>Male</option>
+                                            <option>Female</option>
+                                            <option>Not Specify</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row m-3">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <input type="password" class="form-control" placeholder="Password" asp-for="Password" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <input type="password" class="form-control" placeholder="Verify Password" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row m-5">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <button type="submit" class="btn btn-raised btn-outline-info form-control">Update</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <a class="btn btn-raised btn-warning form-control">Cancel</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#ModalTRSuccess"
+               data-backdrop="false">Top Right</a>
+        </form>
+    </div>
+</section>

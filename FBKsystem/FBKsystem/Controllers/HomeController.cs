@@ -1,4 +1,6 @@
 ﻿using FBKsystem.Models;
+using FBKsystem.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -9,16 +11,21 @@ using System.Threading.Tasks;
 
 namespace FBKsystem.Controllers
 {
+    [AllowAnonymous]
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly IBiodataRepository _memberRepository;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(IBiodataRepository memberRepository)
         {
-            _logger = logger;
+            _memberRepository = memberRepository;
         }
 
         public IActionResult Index()
+        {
+            return View();
+        }
+         public IActionResult login(Biodata member)
         {
             return View();
         }
@@ -27,7 +34,18 @@ namespace FBKsystem.Controllers
         {
             return View();
         }
+        public IActionResult fullprofile()
+        {
+            return View();
+        }
 
+       public IActionResult members()
+        {
+            MembersViewModel membersViewModel = new MembersViewModel();
+            membersViewModel.Biodata = _memberRepository.AllMembers;
+            return View(membersViewModel);
+        }
+       
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

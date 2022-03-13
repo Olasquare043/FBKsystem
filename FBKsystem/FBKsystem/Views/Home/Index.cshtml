@@ -1,10 +1,10 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-
+@{ Layout = "~/Views/Shared/_Layout2.cshtml";}
 <!--Main Navigation-->
 <header>
- 
+
     <!-- Carousel wrapper -->
     <div id="introCarousel" class="carousel slide carousel-fade shadow-2-strong" data-mdb-ride="carousel">
         <!-- Indicators -->
@@ -21,12 +21,8 @@
                 <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
                     <div class="d-flex justify-content-center align-items-center h-100">
                         <div class="text-white text-center">
-                            <h1 class="mb-3">Financial Book Keeping System </h1>
-                            <h5 class="mb-4">Get your information at hand with ease</h5>
-                            <a class="btn btn-outline-light btn-lg m-2" href="paydue"
-                               role="button">Pay Due</a>
-                            <a class="btn btn-outline-light btn-lg m-2" href="#login"
-                              role="button">Login</a>
+                            <h1 class="mb-3">Department of Computer Science </h1>
+                            <h5 class="mb-4">University of Ibadan</h5>
                         </div>
                     </div>
                 </div>
@@ -37,8 +33,12 @@
                 <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);">
                     <div class="d-flex justify-content-center align-items-center h-100">
                         <div class="text-white text-center">
-                            <h1 class="mb-3">Department of Computer Science </h1>
-                            <h5 class="mb-4">University of Ibadan</h5>
+                            <h1 class="mb-3">Financial Book Keeping System </h1>
+                            <h5 class="mb-4">Get your information at hand with ease</h5>
+                            <a class="btn btn-outline-light btn-lg m-2" href="paydue"
+                               role="button">Pay Dues</a>
+                            <a class="btn btn-outline-light btn-lg m-2" asp-controller="Account" asp-action="Login"
+                               role="button">Login</a>
                         </div>
                     </div>
                 </div>
@@ -46,13 +46,7 @@
 
             <!-- Single item -->
             <div class="carousel-item">
-                <div class="mask" style="
-                background: linear-gradient(
-                  45deg,
-                  rgba(29, 236, 197, 0.7),
-                  rgba(91, 14, 214, 0.7) 100%
-                );
-              ">
+                <div class="mask" style="background: linear-gradient( 45deg, rgba(29, 236, 197, 0.7),rgba(91, 14, 214, 0.7) 100%);">
                     <div class="d-flex justify-content-center align-items-center h-100">
                         <div class="text-white text-center">
                             <h2>National Association of Computing Student UI Chapter..</h2>
@@ -80,18 +74,27 @@
 </header>
 <!--Main Navigation-->
 <!--Main layout-->
-<main class="mt-5">
-    <div class="container">
+<main class="mt-5"id="overview">
+    <div class="container" >
         <!--Section: Content-->
-        <section>
+        <section >
             <div class="row">
-                <div class="col-md-6 gx-5 mb-4">
-                    <div class="bg-image hover-overlay ripple shadow-2-strong rounded-5" data-mdb-ripple-color="light">
-                        <img src="https://mdbootstrap.com/img/new/slides/031.jpg" class="img-fluid" />
-                        <a href="#!">
-                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                        </a>
-                    </div>
+                <div class="col-md-6 gx-5 mb-4 justify-content-center">
+                   <div class="container">    
+                       <div class="card">
+                           <div class="card-body">
+                               <div class="bg-image hover-overlay ripple rounded-5" data-mdb-ripple-color="light">
+                                   <img src="~/mdb/img/haykay.jpg" class="card-img-top" style="height:100%; width:100%;" />
+                                   <a href="#!">
+                                       <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                                   </a>
+                               </div>
+                           </div>
+                       </div>
+                  </div> 
+                        
+                   
+                    
                 </div>
 
                 <div class="col-md-6 gx-5 mb-4">
@@ -119,10 +122,10 @@
             <h4 class="mb-5"><strong>UI NACOS Current EXCO</strong></h4>
 
             <div class="row">
-                <div class="col-lg-4 col-md-12 mb-4">
+                <div class="col-lg-3 col-md-6 mb-4">
                     <div class="card">
                         <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                            <img src="https://mdbootstrap.com/img/new/standard/nature/184.jpg" class="img-fluid" />
+                            <img src="~/mdb/img/glory.jpg" class="card-img-top" />
                             <a href="#!">
                                 <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
                             </a>
@@ -132,15 +135,32 @@
                             <p class="card-text">
                                 little description,may be bio, what you do or your interest.
                             </p>
-                            <a href="#!" class="btn btn-primary">Full Profile</a>
+                            <a asp-controller="Home" asp-action="fullprofile" class="btn btn-primary">Full Profile</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                            <img src="~/mdb/img/seun1.jpg" class="card-img-top" />
+                            <a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Names</h5>
+                            <p class="card-text">
+                                little description,may be bio, what you do or your interest.
+                            </p>
+                            <a asp-controller="Home" asp-action="fullprofile" class="btn btn-primary">Full Profile</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 mb-4">
+                <div class="col-lg-3 col-md-6 mb-4">
                     <div class="card">
                         <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                            <img src="https://mdbootstrap.com/img/new/standard/nature/023.jpg" class="img-fluid" />
+                            <img src="~/mdb/img/enterprenuer.jpg" class="card-img-top" />
                             <a href="#!">
                                 <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
                             </a>
@@ -150,15 +170,15 @@
                             <p class="card-text">
                                 little description,may be bio, what you do or your interest.
                             </p>
-                            <a href="#!" class="btn btn-primary">Full Profile</a>
+                            <a asp-action="fullprofile" class="btn btn-primary">Full Profile</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 mb-4">
+                <div class="col-lg-3 col-md-6 mb-4">
                     <div class="card">
                         <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                            <img src="https://mdbootstrap.com/img/new/standard/nature/111.jpg" class="img-fluid" />
+                            <img src="~/mdb/img/Finefarouq.jpeg" class="card-img-top" />
                             <a href="#!">
                                 <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
                             </a>
@@ -168,41 +188,22 @@
                             <p class="card-text">
                                 little description,may be bio, what you do or your interest.
                             </p>
-                            <a href="#!" class="btn btn-primary">Full Profile</a>
+                            <a asp-action="fullprofile" class="btn btn-primary">Full Profile</a>
                         </div>
                     </div>
                 </div>
+                <a asp-controller="Home" asp-action="members"> View all Members </a>
             </div>
         </section>
+
         <!--Section: Content-->
 
         <hr class="my-5" />
 
         <!--Section: Content-->
         <section class="mb-5">
-            <h4 class="mb-5 text-center"><strong> Login to Dashboard</strong></h4>
+            <h4 class="mb-5 text-center"><strong><u>Special Announcements </u></strong></h4>
 
-            <div class="row d-flex justify-content-center" id="login">
-                <div class="col-md-4">
-                    <form>
-                        <!-- Matric No input -->
-                        <div class="form-outline mb-4">
-                            <input type="text" id="matric" class="form-control" />
-                            <label class="form-label" for="matric">Matric No</label>
-                        </div>
-
-                        <!-- Password input -->
-                        <div class="form-outline mb-4">
-                            <input type="password" id="password" class="form-control" />
-                            <label class="form-label" for="password">Password</label>
-                        </div>
-                        <!-- Submit button -->
-                        <button type="submit" class="btn btn-primary btn-block mb-4">
-                            Login
-                        </button>                     
-                    </form>
-                </div>
-            </div>
         </section>
         <!--Section: Content-->
     </div>

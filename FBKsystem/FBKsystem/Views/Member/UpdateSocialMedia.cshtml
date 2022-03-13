@@ -1,0 +1,99 @@
+﻿@model SocialMedia
+@{
+    Layout = "~/Views/Shared/_MemberDashboardLayout.cshtml";
+}
+<section>
+    <div class="container">
+        <form asp-action="Create" method="post">
+            <div class="row">
+                <div class="col">
+                    <nav aria-label="breadcrumb" class=" rounded-3 mb-4">
+                        <ol class="breadcrumb mb-0">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a href="#">User</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Update Social Media</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="card p-6">
+                        <div class="card-header">
+                            <h4><small>Carefully fill the form below with respective Social media link...</small></h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="row m-3">
+
+                                <div class="col-sm-6 ">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <input type="text" class="form-control" placeholder="Facebook" asp-for="Facebook" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="  form-group">
+                                        <div class="form-line">
+                                            <input type="text" class="form-control" placeholder="Twitter" asp-for="Twitter" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row m-3">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <input type="text" class="form-control" placeholder="Instagram" asp-for="Instagram" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <input type="text" class="form-control" placeholder="LinkedIn" asp-for="LinkedIn" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row m-3">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <input type="text" class="form-control" placeholder="Github" asp-for="Github" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <input type="text" class="form-control" placeholder="Telegram" asp-for="Telegram" required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                           
+                            <div class="row m-5">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <button type="submit" class="btn btn-raised btn-outline-info form-control">Update</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <a class="btn btn-raised btn-warning form-control">Cancel</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>

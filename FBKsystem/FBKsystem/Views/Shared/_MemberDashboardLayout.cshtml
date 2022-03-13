@@ -1,0 +1,324 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>@ViewBag.Title</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
+    <!-- Google Fonts Roboto -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+          rel="stylesheet">
+    <!-- MDB -->
+    <link href="~/mdb/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/mdb/css/mdb.min.css" rel="stylesheet">
+    <link href="~/mdb/css/style.css" rel="stylesheet">
+    <link href="~/mdb/css/sb-admin-2.min.css" rel="stylesheet">
+</head>
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div class="navbar-nav bg-gradient-info sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" asp-action="Index">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <img src="~/mdb/img/ola.jpg" alt="avatar" class="rounded-circle img-fluid" />
+                </div>
+                <div class="sidebar-brand-text mx-3">User Dashboard</div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+            <!-- Nav Item - Dashboard -->
+            <div class="nav-item active">
+                <a class="nav-link" asp-controller="Member" asp-action="Index">
+                    <i class="fas fa-fw fa-user-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+            </div>
+
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Interface
+            </div>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <div class="nav-item">
+                <a class="nav-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
+                   aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Profile Update</span>
+                </a>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Settings:</h6>
+                        <a class="collapse-item" asp-action="UpdateBio" asp-route-id=?>Bio Update</a>
+                        <a class="collapse-item" asp-action="UpdateSocialMedia">Update Social Media</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nav Item - Utilities Collapse Menu -->
+            <div class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+                   aria-expanded="true" aria-controls="collapseUtilities">
+                    <i class="fas fa-fw fa-wrench"></i>
+                    <span>Dues</span>
+                </a>
+                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
+                     data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Dues Operations:</h6>
+                        <a class="collapse-item" asp-controller="Member" asp-action="PayDues">Pay Dues</a>
+                        <a class="collapse-item" asp-action="PaidDues">Check Paid Dues</a>
+                        <a class="collapse-item" asp-action="PrintReceipt">Print Receipt</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Session
+            </div>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <div class="nav-item">
+                <a href="#" class="nav-link" data-toggle="modal" data-target="#logoutModal">
+                    <i class="fas fa-fw fa-sign-out"></i>
+                    <span >Sign Out</span>
+                </a>
+            </div>
+
+            <!-- Nav Item - Charts -->
+            <!--<div class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Charts</span>
+                </a>
+            </div>-->
+            <!-- Nav Item - Tables -->
+            <!--<div class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Tables</span>
+                </a>
+            </div>-->
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+
+
+        </div>
+        <!-- End of Sidebar -->
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Topbar Search -->
+                    <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                        <div class="input-group">
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                                   aria-label="Search" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="button">
+                                    <i class="fas fa-search fa-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <!-- Topbar Navbar -->
+                    <div class="navbar-nav ml-auto">
+
+                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                        <div class="nav-item dropdown no-arrow d-sm-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                 aria-labelledby="searchDropdown">
+                                <form class="form-inline mr-auto w-100 navbar-search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control bg-light border-0 small"
+                                               placeholder="Search for..." aria-label="Search"
+                                               aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+                        <!-- Nav Item - User Information -->
+                        <div class="nav-item">
+                            <span class="mr-2 d-none d-lg-inline text-gray-600 small"><partial name="_LoginPartial.cshtml" /></span>
+                                <img class="img-profile rounded-circle"
+                                     src="~/mdb/img/ola.jpg">                         
+                        </div>
+                    </div>
+
+                </nav>
+                <!-- End of Topbar -->
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    @RenderBody()
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+            <!-- Footer -->
+            <footer class="bg-light text-lg-start mt-5">
+                <hr class="m-0" />
+                <div class="text-center py-4 align-items-center">
+                    <p>Follow NACOS UI on social media</p>
+                    <a href="#" class="btn btn-primary m-1" role="button"
+                       rel="nofollow" target="_blank">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="#" class="btn btn-primary m-1" role="button" rel="nofollow"
+                       target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="btn btn-primary m-1" role="button" rel="nofollow"
+                       target="_blank">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="btn btn-primary m-1" role="button" rel="nofollow"
+                       target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+
+                <!-- Copyright -->
+                <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                    © 2022 Copyright:
+                    <a class="text-dark" href="https://mdbootstrap.com/">Olasquare Consults</a>
+                </div>
+                <!-- Copyright -->
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+    </div>
+    <!-- End of Page Wrapper -->
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" asp-controller="Home" asp-action="Index">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Side Modal Top Right Success-->
+    <div class="modal fade" id="ModalTRSuccess" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true" data-backdrop="false">
+        <div class="modal-dialog modal-side modal-top-right modal-notify modal-success" role="document">
+            <!--Content-->
+            <div class="modal-content">
+                <!--Header-->
+                <div class="modal-header bg-success">
+                    <p class="heading lead text-white">Modal Success</p>
+
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="text-white">&times;</span>
+                    </button>
+                </div>
+
+                <!--Body-->
+                <div class="modal-body">
+                    <div class="text-center">
+                        <i class="fas fa-check fa-4x mb-3 text-success animated rotateIn"></i>
+                        <p>
+                            Succefully Registered
+                        </p>
+                    </div>
+                </div>
+
+                <!--Footer-->
+                <div class="modal-footer justify-content-center">
+                    <a role="button" class="btn btn-success" data-dismiss="modal">
+                        Ok
+                        <i class="far fa-gem ml-1"></i>
+                    </a>
+                </div>
+            </div>
+            <!--/.Content-->
+        </div>
+    </div>
+    <!-- Side Modal Top Right Success-->
+
+    <script src="~/mdb/js/site.js" asp-append-version="true"></script>
+    <script type="text/javascript" src="~/mdb/js/mdb.min.js"></script>
+    <script src="~/mdb/vendor/jquery/jquery.min.js"></script>
+    <script src="~/mdb/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="~/mdb/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="~/mdb/js/sb-admin-2.min.js"></script>
+    <script src="~/mdb/js/sb-admin-2.min.js"></script>
+    <!-- Page level plugins -->
+    <script src="~/mdb/vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="~/mdb/js/demo/chart-area-demo.js"></script>
+    <script src="~/mdb/js/demo/chart-pie-demo.js"></script>
+    @RenderSection("Scripts", required: false)
+
+</body>
+
+</html>

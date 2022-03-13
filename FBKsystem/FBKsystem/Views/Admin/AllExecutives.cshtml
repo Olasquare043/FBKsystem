@@ -1,0 +1,45 @@
+﻿@{ 
+    Layout = "~/Views/Shared/_AdminDashboardLayout.cshtml";
+}
+<div class="card shadow mt-4 mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">All Executives</h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>SN</th>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th>Level</th>
+                        <th>Tenure</th>
+                        <th>Review</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>SN</th>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th>Level</th>
+                        <th>Tenure</th>
+                        <th>Review</th>
+
+                    </tr>
+                </tfoot>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Akinola Sodeeq</td>
+                        <td>President</td>
+                        <td>400 level</td>
+                        <td>2021/2022</td>
+                        <th><a asp-action="profile"> View Full Profile</a></th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

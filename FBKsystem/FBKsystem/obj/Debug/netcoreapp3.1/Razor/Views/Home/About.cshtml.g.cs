@@ -26,8 +26,15 @@ using FBKsystem.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Users\Olasquare\Documents\GitHub\FBKsystem\FBKsystem\FBKsystem\Views\_ViewImports.cshtml"
+using FBKsystem.ViewModels;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"9e302f41c7063d20940a3520bdba56f5050a30d0", @"/Views/Home/About.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"c0592aae052b7c4c01b41f2b3aaa2d3f1e37eff2", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"747bad8ee7add5cfc8ce9656a5bc4c115ed1379c", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_About : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998
