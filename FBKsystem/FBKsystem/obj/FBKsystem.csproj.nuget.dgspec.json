@@ -1,26 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Olasquare\\Documents\\GitHub\\FBKsystem\\FBKsystem\\FBKsystem\\FBKsystem.csproj": {}
+    "C:\\Users\\olayi\\Documents\\GitHub\\FBKsystem\\FBKsystem\\FBKsystem\\FBKsystem.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Olasquare\\Documents\\GitHub\\FBKsystem\\FBKsystem\\FBKsystem\\FBKsystem.csproj": {
+    "C:\\Users\\olayi\\Documents\\GitHub\\FBKsystem\\FBKsystem\\FBKsystem\\FBKsystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Olasquare\\Documents\\GitHub\\FBKsystem\\FBKsystem\\FBKsystem\\FBKsystem.csproj",
+        "projectUniqueName": "C:\\Users\\olayi\\Documents\\GitHub\\FBKsystem\\FBKsystem\\FBKsystem\\FBKsystem.csproj",
         "projectName": "FBKsystem",
-        "projectPath": "C:\\Users\\Olasquare\\Documents\\GitHub\\FBKsystem\\FBKsystem\\FBKsystem\\FBKsystem.csproj",
-        "packagesPath": "C:\\Users\\Olasquare\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Olasquare\\Documents\\GitHub\\FBKsystem\\FBKsystem\\FBKsystem\\obj\\",
+        "projectPath": "C:\\Users\\olayi\\Documents\\GitHub\\FBKsystem\\FBKsystem\\FBKsystem\\FBKsystem.csproj",
+        "packagesPath": "C:\\Users\\olayi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\olayi\\Documents\\GitHub\\FBKsystem\\FBKsystem\\FBKsystem\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\ProgramData\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Olasquare\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\olayi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -33,7 +31,6 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -45,64 +42,17 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "dependencies": {
-            "AutoMapper": {
-              "target": "Package",
-              "version": "[11.0.0, )"
-            },
-            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[3.1.21, )"
-            },
             "Microsoft.AspNetCore.Identity.UI": {
               "target": "Package",
-              "version": "[3.1.21, )"
-            },
-            "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
-              "target": "Package",
-              "version": "[3.1.20, )"
-            },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[3.1.21, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[3.1.21, )"
-            },
-            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
-              "target": "Package",
-              "version": "[3.1.5, )"
+              "version": "[3.1.26, )"
             }
           },
           "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
+            "net461"
           ],
           "assetTargetFallback": true,
-          "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[3.1.22, 3.1.22]"
-            }
-          ],
-          "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+          "warn": true
         }
       }
     }
